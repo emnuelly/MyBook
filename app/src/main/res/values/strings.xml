@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="cinquenta_tons_de_cinza">
+        A estudante de literatura Anastasia Steele, de 21 anos, entrevista o jovem bilionário Christian Grey.
+        Ela vê nele um homem atraente e brilhante, e ele fica igualmente fascinado por ela.
+        Anastasia mergulha de cabeça nessa relação e descobre os prazeres do sadomasoquismo,
+        tornando-se o objeto de submissão do enigmático Grey</string>
+
+    <string name="o_pequeno_principe">Um piloto cai com seu avião no deserto e ali encontra uma criança
+        loura e frágil. Ela diz ter vindo de um pequeno planeta distante. E ali, na convivência com o
+        piloto perdido, os dois repensam os seus valores e encontram o sentido da vida.</string>
+
+    <string name="kotlin_com_android">A linguagem Kotlin vem ganhando cada vez mais destaque no cenário do
+        desenvolvimento de aplicativos. Projetada para ter uma interoperabilidade total com código Java, Kotlin
+        tem sido a primeira escolha na criação de aplicativos Android, sendo multiparadigma e multiplataforma.
+        Trata-se de uma linguagem moderna, concisa e poderosa, oferecendo segurança, clareza e suporte a ferramentas de alta produtividade.</string>
+    <string name="title_activity_editar">EditarActivity</string>
+</resources>

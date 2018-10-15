@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_todos_livros"
+        android:title="Todos os Livros"
+        android:icon="@drawable/livros"/>
+
+    <item android:id="@+id/menu_quero_ler"
+        android:title="Quero Ler"
+        android:icon="@drawable/queroler"/>
+
+    <item android:id="@+id/menu_lidos"
+        android:title="Já li"
+        android:icon="@drawable/lido"/>
+</menu>
