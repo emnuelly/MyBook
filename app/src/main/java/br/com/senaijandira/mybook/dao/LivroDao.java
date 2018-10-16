@@ -22,7 +22,16 @@ public interface LivroDao {
     @Delete
     void deletar(Livro l);
 
-    @Query("SELECT id, capa, titulo, autor, descricao FROM livro")
+    @Query("SELECT * FROM livro")
     Livro[] selecionarTodos();
+
+    @Query("SELECT * FROM livro WHERE status = 1")
+    Livro[] selecionarLivrosParaLer();
+
+    @Query("SELECT * FROM livro WHERE status = 2")
+    Livro[] selecionarLivrosLidos();
+
+    @Query("SELECT * FROM livro WHERE id =:idLivro")
+    Livro pegarLivro(int idLivro);
 
 }

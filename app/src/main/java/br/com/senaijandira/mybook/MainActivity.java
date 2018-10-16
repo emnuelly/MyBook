@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import br.com.senaijandira.mybook.Fragments.LerActivity;
-import br.com.senaijandira.mybook.Fragments.LidosActivity;
-import br.com.senaijandira.mybook.Fragments.LivroActivity;
+import br.com.senaijandira.mybook.Fragments.LerFragment;
+import br.com.senaijandira.mybook.Fragments.LidosFragment;
+import br.com.senaijandira.mybook.Fragments.LivrosFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
 
         //trocando um layout por outro
-        ft.replace(R.id.frame_layout, new LivroActivity());
+        ft.replace(R.id.frame_layout, new LivrosFragment());
 
         //mandando as alterações
 
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
 
         //trocando um layout por outro
-        ft.replace(R.id.frame_layout, new LidosActivity());
+        ft.replace(R.id.frame_layout, new LidosFragment());
 
         //mandando as alterações
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
 
         //trocando um layout por outro
-        ft.replace(R.id.frame_layout, new LerActivity());
+        ft.replace(R.id.frame_layout, new LerFragment());
 
         //mandando as alterações
 

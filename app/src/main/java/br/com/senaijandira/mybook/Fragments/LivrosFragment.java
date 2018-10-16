@@ -20,7 +20,7 @@ import br.com.senaijandira.mybook.adapter.LivroAdapter;
 import br.com.senaijandira.mybook.db.MyBooksDatabase;
 import br.com.senaijandira.mybook.model.Livro;
 
-public class LivroActivity extends Fragment{
+public class LivrosFragment extends Fragment{
 
     //declarando o list view que vai ser eesponsável por criar a lista de livros
     ListView lstViewLivros;

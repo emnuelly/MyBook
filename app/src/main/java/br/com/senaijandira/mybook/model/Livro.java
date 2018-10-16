@@ -18,6 +18,7 @@ public class Livro {
     private String titulo;
     private String autor;
     private String descricao;
+    private int status;
     
 
     //consultor para livro
@@ -25,12 +26,13 @@ public class Livro {
     }
 
     //consultor para livro passando as informações
-    public Livro(int id, byte [] capa ,String titulo, String autor, String descricao ){
+    public Livro(int id, byte [] capa ,String titulo, String autor, String descricao, int status ){
         this.id = id;
         this.capa = capa;
         this.titulo = titulo;
         this.autor = autor;
         this.descricao = descricao;
+        this.status = status;
     }
 
 
@@ -75,5 +77,12 @@ public class Livro {
         this.descricao = descricao;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
 }

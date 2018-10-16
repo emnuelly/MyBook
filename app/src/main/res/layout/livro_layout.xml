@@ -81,7 +81,6 @@
                     android:src="@drawable/editar"
                     android:id="@+id/editarLivro"
                     android:layout_marginTop="10dp"
-                    android:onClick="editarLivro"
                     />
 
                 <ImageView

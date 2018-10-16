@@ -15,7 +15,8 @@
             android:fontFamily="cursive"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
 
         <ImageView
             android:layout_width="120dp"
@@ -75,7 +76,7 @@
             android:textColor="#fff"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:onClick="salvarLivro"
+            android:onClick="editarLivro"
             />
 
     </LinearLayout>

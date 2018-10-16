@@ -12,13 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.InputStream;
 
-import br.com.senaijandira.mybook.R;
 import br.com.senaijandira.mybook.db.MyBooksDatabase;
 import br.com.senaijandira.mybook.model.Livro;
-import br.com.senaijandira.mybook.Utils;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -90,22 +89,26 @@ public class CadastroActivity extends AppCompatActivity {
 
     public void salvarLivro(View view) {
 
-        //para pegar a capa vai usar um array de bytes
-        byte[] capa = Utils.toByteArray(livroCapa);
+        if(livroCapa == null){
+            Toast.makeText(getApplicationContext(), "Adicione uma imagem!", Toast.LENGTH_SHORT).show();
+        }else {
+            //para pegar a capa vai usar um array de bytes
+            byte[] capa = Utils.toByteArray(livroCapa);
 
-        String titulo = txtTitulo.getText().toString();
-        String descricao = txtDescricao.getText().toString();
-        String autor = txtAutor.getText().toString();
+            String titulo = txtTitulo.getText().toString();
+            String descricao = txtDescricao.getText().toString();
+            String autor = txtAutor.getText().toString();
+            int status = 0;
 
-        //verificando se os componentes estão nulos
-        if(titulo.equals("") && descricao.equals("")){
-            alert("Caixas Vazias", "Preencha os campos e carregue a foto");
-        }else{
-            alert("Sucesso!", "Livro cadastrado com sucesso");
-        }
+            //verificando se os componentes estão nulos
+            if (titulo.equals("") && descricao.equals("")) {
+                alert("Caixas Vazias", "Preencha os campos e carregue a foto");
+            } else {
+                alert("Sucesso!", "Livro cadastrado com sucesso");
+            }
 
-        //chamando o metodo livro para criar um novo obejto livro, estanciando o titulo, descricao pego de dentro das edit text
-        Livro livro = new Livro(0, capa, titulo, autor, descricao );
+            //chamando o metodo livro para criar um novo obejto livro, estanciando o titulo, descricao pego de dentro das edit text
+            Livro livro = new Livro(0, capa, titulo, autor, descricao, status);
 
         /*
         //inserindo a variável estática
@@ -120,10 +123,10 @@ public class CadastroActivity extends AppCompatActivity {
         MainActivity.livros[tamanhoArray] = livro;
         */
 
-        //inserir no banco de dados
-        myBooksDB.daoLivro().inserir(livro);
+            //inserir no banco de dados
+            myBooksDB.daoLivro().inserir(livro);
 
-
+        }
 
     }
 
